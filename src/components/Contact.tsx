@@ -8,7 +8,7 @@ const Contact = () => {
         whileInView={{ opacity: 1, y: 0 }}
         viewport={{ once: true }}
       >
-        <p className="text-sky-400 font-mono mb-4 text-sm">03. What's Next?</p>
+        <p className="text-sky-400 font-mono mb-4 text-sm">What's Next?</p>
         <h3 className="text-4xl md:text-5xl font-bold text-white mb-6">Get In Touch</h3>
         
         <p className="text-zinc-400 mb-10 text-lg">

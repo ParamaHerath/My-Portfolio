@@ -34,7 +34,6 @@ const Projects = () => {
         viewport={{ once: true }}
       >
         <h3 className="text-3xl font-bold text-white mb-10 flex items-center">
-          <span className="text-sky-400 font-mono text-xl mr-3">02.</span>
           Some Things I've Built
           <div className="h-[1px] bg-white/10 flex-grow ml-6"></div>
         </h3>

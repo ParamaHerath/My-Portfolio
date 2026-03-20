@@ -2,6 +2,7 @@ import { motion, useScroll, useTransform } from 'framer-motion';
 import Hero from './components/Hero';
 import Projects from './components/Projects';
 import Skills from './components/Skills';
+import Experience from './components/Experience';
 import Contact from './components/Contact';
 import Navbar from './components/Navbar';
 import StarBackground from './components/StarBackground';
@@ -26,8 +27,9 @@ function App() {
         <Navbar />
         <main className="container mx-auto px-6 pb-12">
           <Hero />
-          <Skills />
           <Projects />
+          <Skills />
+          <Experience />
           <Contact />
         </main>
         

@@ -36,16 +36,21 @@ const Navbar = () => {
           <span className="text-sky-400">/&gt;</span>
         </motion.div>
         
-        <ul className="flex space-x-8 text-sm font-medium">
-          {['About', 'Skills', 'Projects', 'Contact'].map((item, i) => (
+        <ul className="hidden md:flex space-x-8 text-sm font-medium">
+          {[
+            { name: 'Projects', href: '#projects' },
+            { name: 'Skills', href: '#skills' },
+            { name: 'Experience', href: '#experience' },
+            { name: 'Contact', href: '#contact' }
+          ].map((item, i) => (
             <motion.li 
-              key={item}
+              key={item.name}
               initial={{ opacity: 0, y: -10 }}
               animate={{ opacity: 1, y: 0 }}
               transition={{ delay: i * 0.1 }}
             >
-              <a href={`#${item.toLowerCase()}`} className="text-zinc-400 hover:text-white transition-colors duration-300">
-                {item}
+              <a href={item.href} className="text-zinc-400 hover:text-white transition-colors duration-300">
+                {item.name}
               </a>
             </motion.li>
           ))}
