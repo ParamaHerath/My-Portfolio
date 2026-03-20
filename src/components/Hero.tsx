@@ -24,47 +24,58 @@ const Hero = () => {
           human-centered products at <span className="text-sky-400 font-medium">Tech Corp</span>.
         </p>
 
-        <div className="flex flex-col sm:flex-row items-start sm:items-center gap-6">
-          <div className="flex flex-wrap gap-4">
-            <motion.a 
-              href="#projects"
-              whileHover={{ scale: 1.05 }}
-              whileTap={{ scale: 0.95 }}
-              className="px-6 py-3 bg-white/10 hover:bg-white/20 text-white font-medium rounded-lg border border-white/10 backdrop-blur-sm transition-all text-sm"
-            >
-              Check out my work
-            </motion.a>
-            <motion.a 
+        <div className="flex flex-col gap-6">
+          {/* Primary and Secondary Actions */}
+          <div className="flex flex-wrap items-center gap-4">
+            <motion.a
               href="#contact"
-              whileHover={{ scale: 1.05 }}
-              whileTap={{ scale: 0.95 }}
-              className="px-6 py-3 bg-sky-500/10 hover:bg-sky-500/20 text-sky-400 font-medium rounded-lg border border-sky-500/30 backdrop-blur-sm transition-all text-sm"
+              whileHover={{ scale: 1.02 }}
+              whileTap={{ scale: 0.98 }}
+              className="px-6 py-2 bg-white text-black font-semibold rounded-lg transition-all text-sm shadow-lg shadow-white/5"
             >
               Contact Me
             </motion.a>
-            <motion.a 
+
+            <motion.a
+              href="#projects"
+              whileHover={{ scale: 1.02, backgroundColor: "rgba(255, 255, 255, 0.05)" }}
+              whileTap={{ scale: 0.98 }}
+              className="px-6 py-2 bg-transparent text-white font-medium rounded-lg border border-white/20 transition-all text-sm"
+            >
+              View My Work
+            </motion.a>
+          </div>
+
+          {/* Utility Row: CV and Socials */}
+          <div className="flex items-center gap-8 pt-2 border-t border-white/5">
+            {/* CV as a Text Link */}
+            <motion.a
               href="/ParamaHerath.pdf"
               target="_blank"
               rel="noopener noreferrer"
-              whileHover={{ scale: 1.05 }}
-              whileTap={{ scale: 0.95 }}
-              className="px-6 py-3 bg-transparent hover:bg-white/5 text-zinc-300 font-medium rounded-lg border border-zinc-700 backdrop-blur-sm transition-all text-sm"
+              className="group flex items-center gap-2 text-zinc-400 hover:text-white transition-colors text-sm font-bold"
             >
-              Download CV
+              <span>Download Resume</span>
+              <span className="transition-transform group-hover:translate-y-0.5">↓</span>
+              <div className="h-[1px] w-0 group-hover:w-full bg-white transition-all duration-300 absolute -bottom-1" />
             </motion.a>
-          </div>
-          
-          <div className="flex space-x-6 text-zinc-400 mt-2 sm:mt-0 px-2">
-            {[FaGithub, FaLinkedin].map((Icon, i) => (
-              <motion.a 
-                key={i}
-                href="#"
-                whileHover={{ scale: 1.1, color: '#fff' }}
-                className="text-2xl transition-colors"
-              >
-                <Icon />
-              </motion.a>
-            ))}
+
+            {/* Social Icons */}
+            <div className="flex items-center gap-5 text-zinc-400">
+              {[
+                { Icon: FaGithub, href: "#" },
+                { Icon: FaLinkedin, href: "#" }
+              ].map((item, i) => (
+                <motion.a
+                  key={i}
+                  href={item.href}
+                  whileHover={{ scale: 1.1, color: '#fff' }}
+                  className="text-xl transition-colors"
+                >
+                  <item.Icon />
+                </motion.a>
+              ))}
+            </div>
           </div>
         </div>
       </motion.div>
