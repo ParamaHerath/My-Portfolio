@@ -1,5 +1,5 @@
 import { motion } from 'framer-motion';
-import { FaGithub, FaLinkedin, FaTwitter, FaArrowDown } from 'react-icons/fa';
+import { FaGithub, FaLinkedin, FaArrowDown } from 'react-icons/fa';
 
 const Hero = () => {
   return (
@@ -24,17 +24,38 @@ const Hero = () => {
           human-centered products at <span className="text-sky-400 font-medium">Tech Corp</span>.
         </p>
 
-        <div className="flex items-center space-x-6">
-          <motion.button 
-            whileHover={{ scale: 1.05 }}
-            whileTap={{ scale: 0.95 }}
-            className="px-6 py-3 bg-white/10 hover:bg-white/20 text-white font-medium rounded-lg border border-white/10 backdrop-blur-sm transition-all"
-          >
-            Check out my work
-          </motion.button>
+        <div className="flex flex-col sm:flex-row items-start sm:items-center gap-6">
+          <div className="flex flex-wrap gap-4">
+            <motion.a 
+              href="#projects"
+              whileHover={{ scale: 1.05 }}
+              whileTap={{ scale: 0.95 }}
+              className="px-6 py-3 bg-white/10 hover:bg-white/20 text-white font-medium rounded-lg border border-white/10 backdrop-blur-sm transition-all text-sm"
+            >
+              Check out my work
+            </motion.a>
+            <motion.a 
+              href="#contact"
+              whileHover={{ scale: 1.05 }}
+              whileTap={{ scale: 0.95 }}
+              className="px-6 py-3 bg-sky-500/10 hover:bg-sky-500/20 text-sky-400 font-medium rounded-lg border border-sky-500/30 backdrop-blur-sm transition-all text-sm"
+            >
+              Contact Me
+            </motion.a>
+            <motion.a 
+              href="/ParamaHerath.pdf"
+              target="_blank"
+              rel="noopener noreferrer"
+              whileHover={{ scale: 1.05 }}
+              whileTap={{ scale: 0.95 }}
+              className="px-6 py-3 bg-transparent hover:bg-white/5 text-zinc-300 font-medium rounded-lg border border-zinc-700 backdrop-blur-sm transition-all text-sm"
+            >
+              Download CV
+            </motion.a>
+          </div>
           
-          <div className="flex space-x-4 text-zinc-400">
-            {[FaGithub, FaLinkedin, FaTwitter].map((Icon, i) => (
+          <div className="flex space-x-6 text-zinc-400 mt-2 sm:mt-0 px-2">
+            {[FaGithub, FaLinkedin].map((Icon, i) => (
               <motion.a 
                 key={i}
                 href="#"
