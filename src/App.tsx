@@ -4,6 +4,7 @@ import Projects from './components/Projects';
 import Skills from './components/Skills';
 import Contact from './components/Contact';
 import Navbar from './components/Navbar';
+import StarBackground from './components/StarBackground';
 
 function App() {
   const { scrollYProgress } = useScroll();
@@ -11,6 +12,7 @@ function App() {
 
   return (
     <div className="relative min-h-screen bg-zinc-950 text-zinc-200">
+      <StarBackground />
       {/* Dynamic Background */}
       <motion.div 
         className="fixed inset-0 z-0 opacity-30 blur-[100px] pointer-events-none"
@@ -22,7 +24,7 @@ function App() {
       
       <div className="relative z-10">
         <Navbar />
-        <main className="container mx-auto px-6 pt-24 pb-12">
+        <main className="container mx-auto px-6 pb-12">
           <Hero />
           <Skills />
           <Projects />

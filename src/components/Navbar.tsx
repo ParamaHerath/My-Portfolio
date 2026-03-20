@@ -1,8 +1,30 @@
-import { motion } from 'framer-motion';
+import { useState } from 'react';
+import { motion, useScroll, useMotionValueEvent } from 'framer-motion';
 
 const Navbar = () => {
+  const { scrollY } = useScroll();
+  const [hidden, setHidden] = useState(true);
+
+  useMotionValueEvent(scrollY, "change", (latest) => {
+    // Show navbar after scrolling down slightly (e.g., 100px)
+    if (latest > 100) {
+      setHidden(false);
+    } else {
+      setHidden(true);
+    }
+  });
+
   return (
-    <nav className="fixed top-0 left-0 right-0 z-50 px-6 py-4 backdrop-blur-md bg-zinc-950/50 border-b border-white/5">
+    <motion.nav 
+      variants={{
+        visible: { y: 0, opacity: 1 },
+        hidden: { y: '-100%', opacity: 0 }
+      }}
+      initial="hidden"
+      animate={hidden ? "hidden" : "visible"}
+      transition={{ duration: 0.35, ease: "easeInOut" }}
+      className="fixed top-0 left-0 right-0 z-50 px-6 py-4 backdrop-blur-md bg-zinc-950/80 border-b border-white/5"
+    >
       <div className="container mx-auto flex items-center justify-between">
         <motion.div 
           initial={{ opacity: 0, x: -20 }}
@@ -29,7 +51,7 @@ const Navbar = () => {
           ))}
         </ul>
       </div>
-    </nav>
+    </motion.nav>
   );
 };
 
