@@ -64,15 +64,15 @@ const Projects = () => {
   };
 
   return (
-    <section id="projects" className="min-h-[100vh] supports-[height:100dvh]:min-h-[100dvh] flex flex-col justify-center py-12 md:py-20 overflow-hidden relative">
-      <div className="container mx-auto px-4 sm:px-6 mb-8 md:mb-12 z-20">
+    <section id="projects" className="min-h-[100vh] supports-[height:100dvh]:min-h-[100dvh] flex flex-col justify-center py-16 md:py-24 relative">
+      <div className="w-full z-20 mb-8 sm:mb-12">
         <h3 className="text-2xl sm:text-3xl font-bold text-white flex items-center">
           Some Things I've Built
           <div className="h-[1px] bg-white/10 flex-grow ml-4 sm:ml-6"></div>
         </h3>
       </div>
 
-      <div className="relative w-full max-w-7xl mx-auto flex items-center justify-center min-h-[480px] sm:min-h-[550px] md:min-h-[700px] z-10 perspective-[1000px]">
+      <div className="w-[calc(100%+3rem)] -mx-6 sm:w-full sm:mx-0 relative flex items-center justify-center h-[65vh] sm:h-[60vh] md:h-[70vh] min-h-[420px] max-h-[800px] z-10 perspective-[1000px] overflow-hidden">
         {projects.map((project, index) => {
           const offset = getOffset(index);
           const isCenter = offset === 0;
@@ -100,7 +100,7 @@ const Projects = () => {
                 zIndex
               }}
               transition={{ duration: 0.6, ease: "easeInOut" }}
-              className="absolute w-[75vw] sm:w-[85vw] md:w-[60vw] max-w-4xl aspect-[3/4] sm:aspect-[4/5] md:aspect-[16/10] bg-zinc-900 border border-white/10 rounded-lg overflow-hidden shadow-2xl"
+              className="absolute w-[82vw] sm:w-[75vw] md:w-[60vw] max-w-5xl h-[95%] sm:h-full bg-zinc-900 border border-white/10 rounded-lg overflow-hidden shadow-2xl"
               style={{ pointerEvents: isCenter ? 'auto' : 'none' }}
             >
               <div className="absolute inset-0 z-0">
@@ -139,7 +139,7 @@ const Projects = () => {
       </div>
       
       {/* Navigation Arrows */}
-      <div className="absolute bottom-4 sm:bottom-10 left-1/2 -translate-x-1/2 z-30 flex gap-6 sm:gap-8">
+      <div className="flex justify-center gap-6 sm:gap-8 mt-8 z-30">
         <button 
           onClick={prevCard}
           className="p-3 sm:p-4 bg-zinc-900/50 hover:bg-sky-500/20 border border-white/10 text-white rounded-full backdrop-blur-md transition-all"
