@@ -88,7 +88,7 @@ const Hero = () => {
         transition={{ repeat: Infinity, duration: 2, ease: "easeInOut" }}
         className="absolute bottom-10 left-1/2 -translate-x-1/2 flex flex-col items-center gap-2 text-zinc-500"
       >
-        <span className="text-[10px] font-mono tracking-[0.2em] uppercase">Scroll</span>
+        <span className="text-[10px] font-bold tracking-[0.2em] uppercase">Scroll</span>
         <FaArrowDown className="opacity-75" />
       </motion.div>
     </section>

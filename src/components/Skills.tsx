@@ -5,7 +5,9 @@ import {
   SiNextdotjs, SiExpress, SiSpringboot, SiElectron, SiFlutter, 
   SiMysql, SiPostgresql, SiSqlite, SiMongodb, SiPostman 
 } from 'react-icons/si';
-import { TbBrandCSharp, TbBrandVscode, TbBrandVisualStudio } from 'react-icons/tb';
+import { TbBrandCSharp } from 'react-icons/tb';
+import { VscVscode } from "react-icons/vsc";
+import { DiVisualstudio } from "react-icons/di";
 
 const skillCategories = [
   {
@@ -46,8 +48,8 @@ const skillCategories = [
     skills: [
       { name: "Git", icon: FaGitAlt, color: "#F05032" },
       { name: "GitHub", icon: FaGithub, color: "#ffffff" },
-      { name: "VS Code", icon: TbBrandVscode, color: "#007ACC" },
-      { name: "Visual Studio", icon: TbBrandVisualStudio, color: "#5C2D91" },
+      { name: "VS Code", icon: VscVscode, color: "#007ACC" },
+      { name: "Visual Studio", icon: DiVisualstudio, color: "#5C2D91" },
       { name: "Postman", icon: SiPostman, color: "#FF6C37" }
     ]
   }

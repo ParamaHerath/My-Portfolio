@@ -55,7 +55,7 @@ const Experience = () => {
                 )}
               </div>
 
-              <div className="w-[calc(100%-4rem)] md:w-[calc(50%-2.5rem)] p-6 rounded-xl border border-white/5 bg-white/[0.02] backdrop-blur-sm group-hover:bg-white/[0.04] group-hover:border-white/10 transition-all">
+              <div className="w-[calc(100%-4rem)] md:w-[calc(50%-2.5rem)] p-6 rounded-lg border border-white/5 bg-white/[0.02] backdrop-blur-sm group-hover:bg-white/[0.04] group-hover:border-white/10 transition-all">
                 <div className="flex flex-col sm:flex-row sm:items-center justify-between mb-2 gap-2">
                   <h4 className="font-bold text-lg text-white">{item.title}</h4>
                   <span className="text-xs font-mono text-sky-400 bg-sky-400/10 px-3 py-1 rounded-full w-fit">
