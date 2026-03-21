@@ -72,7 +72,13 @@ const Projects = () => {
         </h3>
       </div>
 
-      <div className="w-[calc(100%+3rem)] -mx-6 sm:w-full sm:mx-0 relative flex items-center justify-center h-[65vh] sm:h-[60vh] md:h-[70vh] min-h-[420px] max-h-[800px] z-10 perspective-[1000px] overflow-hidden">
+      <div 
+        className="w-[calc(100%+3rem)] -mx-6 sm:w-full sm:mx-0 relative flex items-center justify-center h-[65vh] sm:h-[60vh] md:h-[70vh] min-h-[420px] max-h-[800px] z-10 perspective-[1000px] overflow-hidden"
+        style={{ 
+          WebkitMaskImage: 'linear-gradient(to right, transparent, black 7%, black 93%, transparent)',
+          maskImage: 'linear-gradient(to right, transparent, black 7%, black 93%, transparent)' 
+        }}
+      >
         {projects.map((project, index) => {
           const offset = getOffset(index);
           const isCenter = offset === 0;
@@ -118,7 +124,7 @@ const Projects = () => {
                     
                     <ul className="flex flex-wrap gap-2 sm:gap-3">
                       {project.tech.map((tech) => (
-                        <li key={tech} className="text-[10px] sm:text-xs font-mono text-sky-400 bg-sky-400/10 px-2 sm:px-3 py-1 rounded-full">{tech}</li>
+                        <li key={tech} className="text-[10px] sm:text-xs font-mono text-sky-400 bg-sky-400/10 px-2 sm:px-3 py-1 rounded-sm">{tech}</li>
                       ))}
                     </ul>
                   </div>
