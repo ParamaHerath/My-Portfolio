@@ -34,7 +34,7 @@ function App() {
         </main>
         
         <footer className="py-8 text-center text-sm text-zinc-500 border-t border-white/5">
-          <p>© {new Date().getFullYear()} Software Engineer. Built with React & Tailwind.</p>
+          <p>© {new Date().getFullYear()} Parama Herath - All Rights Reserved.</p>
         </footer>
       </div>
     </div>

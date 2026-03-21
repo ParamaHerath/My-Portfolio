@@ -14,14 +14,17 @@ const Hero = () => {
         <h1 className="text-6xl md:text-8xl font-bold text-white mb-6 tracking-tight">
           Parama Herath!
         </h1>
-        <h2 className="text-4xl md:text-6xl font-bold text-zinc-400 mb-8">
-          I build things for the web.
+        <h2 className="text-4xl font-bold text-zinc-400 mb-8">
+          I build web, mobile & desktop apps.
         </h2>
         
         <p className="text-lg text-zinc-400 max-w-xl leading-relaxed mb-10">
-          I'm a software engineer specializing in building (and occasionally designing) 
+          {/* I'm a software engineer specializing in building (and occasionally designing) 
           exceptional digital experiences. Currently, I'm focused on building accessible, 
-          human-centered products at <span className="text-sky-400 font-medium">Tech Corp</span>.
+          human-centered products at <span className="text-sky-400 font-medium">Tech Corp</span>. */}
+          I'm a Computer Science undergrad building scalable, user-friendly applications
+          across multiple platforms, merging modern tech with intuitive design. <span className="text-sky-400 font-medium">
+          Have a project in mind? Let’s bring it to life.</span>
         </p>
 
         <div className="flex flex-col gap-6">
@@ -63,8 +66,8 @@ const Hero = () => {
             {/* Social Icons */}
             <div className="flex items-center gap-5 text-zinc-400">
               {[
-                { Icon: FaGithub, href: "#" },
-                { Icon: FaLinkedin, href: "#" }
+                { Icon: FaGithub, href: "https://github.com/ParamaHerath" },
+                { Icon: FaLinkedin, href: "https://www.linkedin.com/in/parama-herath/" }
               ].map((item, i) => (
                 <motion.a
                   key={i}
