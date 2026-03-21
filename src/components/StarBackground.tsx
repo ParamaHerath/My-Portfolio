@@ -19,12 +19,12 @@ const StarBackground = () => {
 
     const initStars = () => {
       stars = [];
-      for (let i = 0; i < 150; i++) {
+      for (let i = 0; i < 250; i++) {
         stars.push({
           x: Math.random() * window.innerWidth,
           y: Math.random() * window.innerHeight,
           radius: Math.random() * 1.5,
-          speed: Math.random() * 0.5 + 0.1,
+          speed: Math.random() * 1.0 + 0.2,
           alpha: Math.random() * 0.8 + 0.2
         });
       }
@@ -39,9 +39,18 @@ const StarBackground = () => {
         ctx.fill();
 
         star.y -= star.speed;
-        if (star.y < 0) {
-          star.y = canvas.height;
-          star.x = Math.random() * canvas.width;
+        star.x -= star.speed; // Move leftwards as well for the top-left trajectory
+
+        // Respawn when off-screen (top or left)
+        if (star.y < 0 || star.x < 0) {
+          // Distribute new spawns randomly along either the bottom or right edge
+          if (Math.random() > 0.5) {
+            star.x = canvas.width;
+            star.y = Math.random() * canvas.height;
+          } else {
+            star.x = Math.random() * canvas.width;
+            star.y = canvas.height;
+          }
         }
       });
       animationFrameId = requestAnimationFrame(drawAndMove);

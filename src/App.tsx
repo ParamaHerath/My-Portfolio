@@ -12,7 +12,7 @@ function App() {
   const backgroundY = useTransform(scrollYProgress, [0, 1], ['0%', '50%']);
 
   return (
-    <div className="relative min-h-screen bg-zinc-950 text-zinc-200">
+    <div className="relative min-h-[100vh] supports-[height:100dvh]:min-h-[100dvh] bg-zinc-950 text-zinc-200">
       <StarBackground />
       {/* Dynamic Background */}
       <motion.div 

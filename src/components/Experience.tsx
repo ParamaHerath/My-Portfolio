@@ -26,15 +26,15 @@ const experienceData = [
 
 const Experience = () => {
   return (
-    <section id="experience" className="py-20">
+    <section id="experience" className="py-12 md:py-20">
       <motion.div
         initial={{ opacity: 0 }}
         whileInView={{ opacity: 1 }}
         viewport={{ once: true }}
       >
-        <h3 className="text-3xl font-bold text-white mb-10 flex items-center">
+        <h3 className="text-2xl sm:text-3xl font-bold text-white mb-8 sm:mb-10 flex items-center">
           Education & Work Experience
-          <div className="h-[1px] bg-white/10 flex-grow ml-6"></div>
+          <div className="h-[1px] bg-white/10 flex-grow ml-4 sm:ml-6"></div>
         </h3>
 
         <div className="space-y-8 relative before:absolute before:inset-0 before:ml-5 before:-translate-x-px md:before:mx-auto md:before:translate-x-0 before:h-full before:w-0.5 before:bg-gradient-to-b before:from-transparent before:via-white/10 before:to-transparent">
@@ -55,7 +55,7 @@ const Experience = () => {
                 )}
               </div>
 
-              <div className="w-[calc(100%-4rem)] md:w-[calc(50%-2.5rem)] p-6 rounded-xl border border-white/5 bg-white/[0.02] backdrop-blur-sm group-hover:bg-white/[0.04] group-hover:border-white/10 transition-all">
+              <div className="w-[calc(100%-4rem)] md:w-[calc(50%-2.5rem)] p-6 rounded-lg border border-white/5 bg-white/[0.02] backdrop-blur-sm group-hover:bg-white/[0.04] group-hover:border-white/10 transition-all">
                 <div className="flex flex-col sm:flex-row sm:items-center justify-between mb-2 gap-2">
                   <h4 className="font-bold text-lg text-white">{item.title}</h4>
                   <span className="text-xs font-mono text-sky-400 bg-sky-400/10 px-3 py-1 rounded-full w-fit">

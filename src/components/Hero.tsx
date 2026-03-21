@@ -3,22 +3,22 @@ import { FaGithub, FaLinkedin, FaArrowDown } from 'react-icons/fa';
 
 const Hero = () => {
   return (
-    <section id="about" className="h-screen flex flex-col justify-center relative">
+    <section id="about" className="min-h-[100vh] supports-[height:100dvh]:min-h-[100dvh] flex flex-col justify-center relative py-12">
       <motion.div
         initial={{ opacity: 0, y: 20 }}
         animate={{ opacity: 1, y: 0 }}
         transition={{ duration: 0.5 }}
         className="max-w-3xl"
       >
-        <p className="text-sky-400 font-mono mb-4">Hi, I'm</p>
-        <h1 className="text-6xl md:text-8xl font-bold text-white mb-6 tracking-tight">
+        <p className="text-sky-400 font-mono mb-2 sm:mb-4 text-sm sm:text-base">Hi, I'm</p>
+        <h1 className="text-5xl sm:text-6xl md:text-8xl font-bold text-white mb-4 sm:mb-6 tracking-tight">
           Parama Herath!
         </h1>
-        <h2 className="text-4xl font-bold text-zinc-400 mb-8">
+        <h2 className="text-2xl sm:text-4xl font-bold text-zinc-400 mb-6 sm:mb-8 tracking-tight">
           I build web, mobile & desktop apps.
         </h2>
         
-        <p className="text-lg text-zinc-400 max-w-xl leading-relaxed mb-10">
+        <p className="text-[15px] sm:text-lg text-zinc-400 max-w-xl leading-relaxed mb-8 sm:mb-10">
           {/* I'm a software engineer specializing in building (and occasionally designing) 
           exceptional digital experiences. Currently, I'm focused on building accessible, 
           human-centered products at <span className="text-sky-400 font-medium">Tech Corp</span>. */}
@@ -27,9 +27,9 @@ const Hero = () => {
           Have a project in mind? Let’s bring it to life.</span>
         </p>
 
-        <div className="flex flex-col gap-6">
+        <div className="flex flex-col gap-5 sm:gap-6">
           {/* Primary and Secondary Actions */}
-          <div className="flex flex-wrap items-center gap-4">
+          <div className="flex flex-wrap items-center gap-3 sm:gap-4">
             <motion.a
               href="#contact"
               whileHover={{ scale: 1.02 }}
@@ -88,7 +88,7 @@ const Hero = () => {
         transition={{ repeat: Infinity, duration: 2, ease: "easeInOut" }}
         className="absolute bottom-10 left-1/2 -translate-x-1/2 flex flex-col items-center gap-2 text-zinc-500"
       >
-        <span className="text-[10px] font-mono tracking-[0.2em] uppercase">Scroll</span>
+        <span className="text-[10px] font-bold tracking-[0.2em] uppercase">Scroll</span>
         <FaArrowDown className="opacity-75" />
       </motion.div>
     </section>
