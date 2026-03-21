@@ -3,24 +3,24 @@ import { motion } from 'framer-motion';
 const experienceData = [
   {
     type: "work",
-    title: "Software Engineer",
-    company: "Tech Corp",
-    date: "2023 - Present",
-    description: "Developing scalable web applications, optimizing backend architectures, and contributing to frontend component libraries using React and Node.js."
+    title: "Software Engineering Intern",
+    company: "Digital Platforms, Sri Lanka Telecom (SLT)",
+    date: "Jun 2025 - Present",
+    description: "Engineered a full-stack internal app with tokenized APIs and automated CI/CD pipelines, supporting over 100 active trainees and administrators."
   },
   {
     type: "education",
-    title: "MSc in Computer Science",
-    company: "University of Technology",
-    date: "2021 - 2023",
-    description: "Focus on Artificial Intelligence, distributed systems, and advanced algorithms. Graduated with honors."
+    title: "B.Sc (Hons.) in Computer Science",
+    company: "University of Westminster | IIT Sri Lanka",
+    date: "Sep 2023 - 2027",
+    description: "Focused on Full-Stack Development, Client-Server Architectures, OOP, and Database Systems, including a collaborative Software Development Group Project."
   },
   {
     type: "education",
-    title: "BSc in Software Engineering",
-    company: "State University",
-    date: "2017 - 2021",
-    description: "Foundational studies in data structures, web development, and software lifecycle. Led the university coding club."
+    title: "Pearson Edexcel International Advanced Level",
+    company: "British Council Colombo",
+    date: "Oct 2020 - Oct 2022",
+    description: "Foundational studies in Mathematics, Physics, and Chemistry, establishing a strong analytical base for further technical development and engineering."
   }
 ];
 

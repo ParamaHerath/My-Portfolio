@@ -4,44 +4,44 @@ import { FaGithub, FaExternalLinkAlt, FaChevronLeft, FaChevronRight } from 'reac
 
 const projects = [
   {
-    title: "E-Commerce Platform",
-    description: "A full-stack e-commerce solution built with Next.js, Node.js, and PostgreSQL. Features include real-time inventory management, Stripe integration, and an admin dashboard.",
-    tech: ["Next.js", "TypeScript", "Tailwind", "Node.js"],
+    title: "Context",
+    description: "A WinUI 3 whiteboard-style desktop application for unified canvas management. Enables users to store text, images, and drawings in a single custom file format for simplified resource handling.",
+    tech: ["WinUI 3", ".NET", "C#", "Windows App SDK", "File I/O"],
     github: "#",
     live: "#",
-    image: "https://images.unsplash.com/photo-1557821552-17105176677c?q=80&w=1600&auto=format&fit=crop"
+    image: "https://images.unsplash.com/photo-1542744094-3a31f272c490?q=80&w=1600&auto=format&fit=crop"
   },
   {
-    title: "Task Management App",
-    description: "A drag-and-drop kanban board application for team productivity. Includes real-time collaboration using WebSockets and role-based access control.",
-    tech: ["React", "Express", "Socket.io", "MongoDB"],
+    title: "VidStash",
+    description: "A media library desktop app that organizes local files into a Netflix-style interface. Features automated filename parsing, TMDB metadata integration, and watch-status tracking.",
+    tech: ["Electron", "Node.js", "SQLite", "Tailwind CSS", "File I/O"],
     github: "#",
     live: "#",
-    image: "https://images.unsplash.com/photo-1611224923853-80b023f02d71?q=80&w=1600&auto=format&fit=crop"
+    image: "https://images.unsplash.com/photo-1522869635100-9f4c5e86aa37?q=80&w=1600&auto=format&fit=crop"
   },
   {
-    title: "Weather Dashboard",
-    description: "A beautiful weather visualization tool that aggregates data from multiple APIs. Features interactive charts and location-based forecasting.",
-    tech: ["React", "Framer Motion", "Chart.js", "Weather API"],
+    title: "Real-Time Ticketing Simulator",
+    description: "A full-stack simulation of high-traffic network ticketing. Implements multithreading and synchronization on the backend to prevent race conditions during concurrent transactions.",
+    tech: ["React", "Spring Boot", "PostgreSQL", "Java Concurrency"],
     github: "#",
     live: "#",
-    image: "https://images.unsplash.com/photo-1504608524841-42e564145af4?q=80&w=1600&auto=format&fit=crop"
+    image: "https://images.unsplash.com/photo-1539628399213-d6aa89c93074?q=80&w=1600&auto=format&fit=crop"
   },
   {
-    title: "AI Code Assistant",
-    description: "A browser extension that provides intelligent code suggestions and refactoring capabilities powered by LLMs. Integrates directly into VS Code.",
-    tech: ["TypeScript", "React", "OpenAI API", "WebPack"],
+    title: "NestQuest",
+    description: "A real-estate exploration platform focused on high-performance client-side logic. Includes advanced filtering systems and Local Storage integration for persisting user preferences.",
+    tech: ["React", "React Widgets", "localStorage API", "JavaScript"],
     github: "#",
     live: "#",
-    image: "https://images.unsplash.com/photo-1555949963-ff9fe0c870eb?q=80&w=1600&auto=format&fit=crop"
+    image: "https://images.unsplash.com/photo-1560518883-ce09059eeffa?q=80&w=1600&auto=format&fit=crop"
   },
   {
-    title: "Fitness Tracker Mobile",
-    description: "A cross-platform mobile application for tracking workouts, nutrition, and health metrics. Features social challenges and progress visualization.",
-    tech: ["React Native", "Firebase", "Redux", "Expo"],
+    title: "FreshTrack SL",
+    description: "A cross-platform mobile app designed to reduce Sri Lankan crop wastage. Uses linear regression and predictive analytics to forecast demand and optimize supply chains.",
+    tech: ["Flutter", "Python", "Supabase", "Machine Learning"],
     github: "#",
     live: "#",
-    image: "https://images.unsplash.com/photo-1526506161-5cc71f30127e?q=80&w=1600&auto=format&fit=crop"
+    image: "https://images.unsplash.com/photo-1595667929228-197607bc9271?q=80&w=1600&auto=format&fit=crop"
   }
 ];
 
@@ -144,13 +144,13 @@ const Projects = () => {
           onClick={prevCard}
           className="p-4 bg-zinc-900/50 hover:bg-sky-500/20 border border-white/10 text-white rounded-full backdrop-blur-md transition-all"
         >
-          <FaChevronLeft size={20} />
+          <FaChevronLeft size={16} />
         </button>
         <button 
           onClick={nextCard}
           className="p-4 bg-zinc-900/50 hover:bg-sky-500/20 border border-white/10 text-white rounded-full backdrop-blur-md transition-all"
         >
-          <FaChevronRight size={20} />
+          <FaChevronRight size={16} />
         </button>
       </div>
     </section>
