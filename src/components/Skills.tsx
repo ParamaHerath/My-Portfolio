@@ -57,23 +57,23 @@ const skillCategories = [
 
 const Skills = () => {
   return (
-    <section id="skills" className="py-20">
+    <section id="skills" className="py-12 md:py-20">
       <motion.div
         initial={{ opacity: 0 }}
         whileInView={{ opacity: 1 }}
         viewport={{ once: true }}
         transition={{ duration: 0.5 }}
       >
-        <h3 className="text-3xl font-bold text-white mb-12 flex items-center">
+        <h3 className="text-2xl sm:text-3xl font-bold text-white mb-8 sm:mb-12 flex items-center">
           Technical Armoury
-          <div className="h-[1px] bg-white/10 flex-grow ml-6"></div>
+          <div className="h-[1px] bg-white/10 flex-grow ml-4 sm:ml-6"></div>
         </h3>
 
-        <div className="space-y-10">
+        <div className="space-y-8 sm:space-y-10">
           {skillCategories.map((category) => (
             <div key={category.title}>
-              <h4 className="text-lg font-medium text-zinc-300 mb-4">{category.title}</h4>
-              <div className="flex flex-wrap gap-4">
+              <h4 className="text-base sm:text-lg font-medium text-zinc-300 mb-3 sm:mb-4">{category.title}</h4>
+              <div className="flex flex-wrap gap-2 sm:gap-4">
                 {category.skills.map((skill, index) => {
                   const Icon = skill.icon;
                   return (
@@ -83,10 +83,10 @@ const Skills = () => {
                       whileInView={{ opacity: 1, y: 0 }}
                       viewport={{ once: true }}
                       transition={{ delay: index * 0.05 }}
-                      className="flex items-center gap-3 px-5 py-3 bg-zinc-900 border border-white/5 rounded-md hover:bg-zinc-800 hover:border-white/10 transition-colors shadow-sm cursor-default"
+                      className="flex items-center gap-2 sm:gap-3 px-3 py-2 sm:px-5 sm:py-3 bg-zinc-900 border border-white/5 rounded-md hover:bg-zinc-800 hover:border-white/10 transition-colors shadow-sm cursor-default"
                     >
-                      <Icon size={20} style={{ color: skill.color }} />
-                      <span className="font-medium text-zinc-200 text-sm tracking-wide">{skill.name}</span>
+                      <Icon className="text-base sm:text-xl" style={{ color: skill.color }} />
+                      <span className="font-medium text-zinc-200 text-xs sm:text-sm tracking-wide">{skill.name}</span>
                     </motion.div>
                   );
                 })}

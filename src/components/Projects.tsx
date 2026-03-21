@@ -64,15 +64,15 @@ const Projects = () => {
   };
 
   return (
-    <section id="projects" className="h-screen flex flex-col justify-center py-20 overflow-hidden relative">
-      <div className="container mx-auto px-6 mb-12 z-20">
-        <h3 className="text-3xl font-bold text-white flex items-center">
+    <section id="projects" className="min-h-[100vh] supports-[height:100dvh]:min-h-[100dvh] flex flex-col justify-center py-12 md:py-20 overflow-hidden relative">
+      <div className="container mx-auto px-4 sm:px-6 mb-8 md:mb-12 z-20">
+        <h3 className="text-2xl sm:text-3xl font-bold text-white flex items-center">
           Some Things I've Built
-          <div className="h-[1px] bg-white/10 flex-grow ml-6"></div>
+          <div className="h-[1px] bg-white/10 flex-grow ml-4 sm:ml-6"></div>
         </h3>
       </div>
 
-      <div className="relative w-full max-w-7xl mx-auto flex items-center justify-center min-h-[550px] md:min-h-[700px] z-10 perspective-[1000px]">
+      <div className="relative w-full max-w-7xl mx-auto flex items-center justify-center min-h-[480px] sm:min-h-[550px] md:min-h-[700px] z-10 perspective-[1000px]">
         {projects.map((project, index) => {
           const offset = getOffset(index);
           const isCenter = offset === 0;
@@ -100,7 +100,7 @@ const Projects = () => {
                 zIndex
               }}
               transition={{ duration: 0.6, ease: "easeInOut" }}
-              className="absolute w-[85vw] md:w-[60vw] max-w-4xl aspect-[4/5] sm:aspect-square md:aspect-[16/10] bg-zinc-900 border border-white/10 rounded-lg overflow-hidden shadow-2xl"
+              className="absolute w-[75vw] sm:w-[85vw] md:w-[60vw] max-w-4xl aspect-[3/4] sm:aspect-[4/5] md:aspect-[16/10] bg-zinc-900 border border-white/10 rounded-lg overflow-hidden shadow-2xl"
               style={{ pointerEvents: isCenter ? 'auto' : 'none' }}
             >
               <div className="absolute inset-0 z-0">
@@ -108,27 +108,27 @@ const Projects = () => {
                 <img src={project.image} alt={project.title} className="w-full h-full object-cover object-center translate-z-0" />
               </div>
               
-              <div className="absolute inset-0 z-20 p-6 md:p-10 flex flex-col justify-end bg-gradient-to-t from-zinc-950 via-zinc-950/80 md:via-zinc-950/40 to-transparent">
-                <div className="flex flex-col md:flex-row md:justify-between md:items-end gap-6 md:gap-0">
+              <div className="absolute inset-0 z-20 p-5 sm:p-6 md:p-10 flex flex-col justify-end bg-gradient-to-t from-zinc-950 via-zinc-950/80 md:via-zinc-950/40 to-transparent">
+                <div className="flex flex-col md:flex-row md:justify-between md:items-end gap-4 sm:gap-6 md:gap-0">
                   <div className="max-w-2xl text-left">
-                    <h4 className="text-2xl md:text-3xl font-bold text-white mb-3 tracking-tight">{project.title}</h4>
-                    <p className="text-zinc-300 text-sm md:text-base leading-relaxed mb-6 line-clamp-3 md:line-clamp-none">
+                    <h4 className="text-xl sm:text-2xl md:text-3xl font-bold text-white mb-2 sm:mb-3 tracking-tight">{project.title}</h4>
+                    <p className="text-zinc-300 text-xs sm:text-sm md:text-base leading-relaxed mb-4 sm:mb-6 line-clamp-4 sm:line-clamp-3 md:line-clamp-none">
                       {project.description}
                     </p>
                     
-                    <ul className="flex flex-wrap gap-3">
+                    <ul className="flex flex-wrap gap-2 sm:gap-3">
                       {project.tech.map((tech) => (
-                        <li key={tech} className="text-xs font-mono text-sky-400 bg-sky-400/10 px-3 py-1 rounded-full">{tech}</li>
+                        <li key={tech} className="text-[10px] sm:text-xs font-mono text-sky-400 bg-sky-400/10 px-2 sm:px-3 py-1 rounded-full">{tech}</li>
                       ))}
                     </ul>
                   </div>
                   
-                  <div className="flex gap-4 md:ml-4 pb-2">
-                    <a href={project.github} className="p-3 bg-white/10 hover:bg-white/20 text-white rounded-full transition-colors backdrop-blur-sm shadow-xl">
-                      <FaGithub size={22} />
+                  <div className="flex gap-3 sm:gap-4 md:ml-4 pb-1 sm:pb-2">
+                    <a href={project.github} className="p-2 sm:p-3 bg-white/10 hover:bg-white/20 text-white rounded-full transition-colors backdrop-blur-sm shadow-xl">
+                      <FaGithub className="text-lg sm:text-[22px]" />
                     </a>
-                    <a href={project.live} className="p-3 bg-white/10 hover:bg-white/20 text-white rounded-full transition-colors backdrop-blur-sm shadow-xl">
-                      <FaExternalLinkAlt size={20} />
+                    <a href={project.live} className="p-2 sm:p-3 bg-white/10 hover:bg-white/20 text-white rounded-full transition-colors backdrop-blur-sm shadow-xl">
+                      <FaExternalLinkAlt className="text-base sm:text-[20px]" />
                     </a>
                   </div>
                 </div>
@@ -139,16 +139,16 @@ const Projects = () => {
       </div>
       
       {/* Navigation Arrows */}
-      <div className="absolute bottom-10 left-1/2 -translate-x-1/2 z-30 flex gap-8">
+      <div className="absolute bottom-4 sm:bottom-10 left-1/2 -translate-x-1/2 z-30 flex gap-6 sm:gap-8">
         <button 
           onClick={prevCard}
-          className="p-4 bg-zinc-900/50 hover:bg-sky-500/20 border border-white/10 text-white rounded-full backdrop-blur-md transition-all"
+          className="p-3 sm:p-4 bg-zinc-900/50 hover:bg-sky-500/20 border border-white/10 text-white rounded-full backdrop-blur-md transition-all"
         >
           <FaChevronLeft size={16} />
         </button>
         <button 
           onClick={nextCard}
-          className="p-4 bg-zinc-900/50 hover:bg-sky-500/20 border border-white/10 text-white rounded-full backdrop-blur-md transition-all"
+          className="p-3 sm:p-4 bg-zinc-900/50 hover:bg-sky-500/20 border border-white/10 text-white rounded-full backdrop-blur-md transition-all"
         >
           <FaChevronRight size={16} />
         </button>
