@@ -1,6 +1,5 @@
 import { motion } from 'framer-motion';
-import { FaGithub, FaExternalLinkAlt } from 'react-icons/fa';
-import { FaReact, FaJava, FaPython, FaCode, FaHtml5, FaCss3Alt, FaWindows } from 'react-icons/fa';
+import { FaGithub, FaExternalLinkAlt, FaReact, FaJava, FaPython, FaCode, FaHtml5, FaCss3Alt, FaWindows } from 'react-icons/fa';
 import { SiDotnet, SiElectron, SiTailwindcss, SiSqlite, SiSpringboot, SiPostgresql, SiJavascript, SiDart, SiFlutter, SiSupabase } from 'react-icons/si';
 import type { IconType } from 'react-icons';
 
@@ -36,7 +35,8 @@ const projects = [
     tech: ["WinUI 3", ".NET", "C#", "Windows App SDK", "File I/O"],
     github: "#",
     live: "#",
-    image: "https://images.unsplash.com/photo-1542744094-3a31f272c490?q=80&w=1600&auto=format&fit=crop"
+    image: "images/context.png",
+    smallImage: "https://images.unsplash.com/photo-1517694712202-14dd9538aa97?q=80&w=800&auto=format&fit=crop"
   },
   {
     id: 2,
@@ -45,7 +45,8 @@ const projects = [
     tech: ["Electron", "React", "Tailwind CSS", "SQLite", "File I/O"],
     github: "#",
     live: "#",
-    image: "https://images.unsplash.com/photo-1522869635100-9f4c5e86aa37?q=80&w=1600&auto=format&fit=crop"
+    image: "images/vidstash.png",
+    smallImage: "images/vidstash-sm.png"
   },
   {
     id: 3,
@@ -54,7 +55,8 @@ const projects = [
     tech: ["React", "Spring Boot", "Java", "PostgreSQL", "REST"],
     github: "#",
     live: "#",
-    image: "https://images.unsplash.com/photo-1539628399213-d6aa89c93074?q=80&w=1600&auto=format&fit=crop"
+    image: "https://images.unsplash.com/photo-1539628399213-d6aa89c93074?q=80&w=1600&auto=format&fit=crop",
+    smallImage: "https://images.unsplash.com/photo-1555066931-4365d14bab8c?q=80&w=800&auto=format&fit=crop"
   },
   {
     id: 4,
@@ -63,7 +65,8 @@ const projects = [
     tech: ["React", "JavaScript", "React Widgets", "HTML5 & CSS3", "Web Storage API"],
     github: "#",
     live: "#",
-    image: "https://images.unsplash.com/photo-1560518883-ce09059eeffa?q=80&w=1600&auto=format&fit=crop"
+    image: "images/nestquest.png",
+    smallImage: "images/nestquest-sm.jpg"
   },
   {
     id: 5,
@@ -72,7 +75,8 @@ const projects = [
     tech: ["Flutter", "Dart", "Python", "Supabase"],
     github: "#",
     live: "#",
-    image: "/images/freshtracksl.png"
+    image: "images/freshtracksl.png",
+    smallImage: "images/freshtracksl-sm.png"
   }
 ];
 
@@ -102,9 +106,7 @@ const Projects = () => {
             {/* Small side info */}
             <div className="order-2 lg:order-1 lg:col-span-2 flex flex-row lg:flex-col justify-between gap-6 lg:gap-0 lg:py-4">
               <div className="w-1/2 lg:w-full aspect-[3/4] relative block overflow-hidden bg-zinc-900 lg:mb-8 border border-white/5">
-                <img src={p.image} className="absolute inset-0 w-full h-full object-cover scale-150 origin-top-left opacity-30 mix-blend-screen" />
-                <div className="absolute inset-0 bg-gradient-to-t from-zinc-950/80 to-transparent" />
-                <div className="absolute bottom-4 left-4 lg:bottom-6 lg:left-6 text-white/50 text-[10px] font-mono tracking-widest uppercase">Detail</div>
+                <img src={p.smallImage} className="w-full h-full object-cover" />
               </div>
               <div className="w-1/2 lg:w-full border-l-0 lg:border-l border-zinc-800 lg:pl-4">
                 <p className="text-zinc-400 text-[10px] font-bold tracking-[0.2em] uppercase mb-4">Tech Stacks</p>
@@ -138,10 +140,7 @@ const Projects = () => {
 
             {/* Large Image Area */}
             <div className="order-4 lg:order-3 lg:col-span-5 h-[300px] lg:h-auto relative w-full overflow-hidden bg-zinc-900 border border-white/5">
-              <div className="absolute top-12 left-12 origin-top-left rotate-90 text-[10px] tracking-[0.4em] text-white/80 uppercase z-10 mix-blend-difference hidden md:block select-none pointer-events-none">
-                Modern Presentation
-              </div>
-              <img src={p.image} className="w-full h-full object-cover opacity-80 hover:scale-105 transition-transform duration-[2s] ease-out" />
+              <img src={p.image} className="w-full h-full object-cover object-left hover:scale-105 transition-transform duration-[2s] ease-out" />
             </div>
           </motion.div>
         ))}
