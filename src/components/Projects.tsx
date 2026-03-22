@@ -1,5 +1,32 @@
 import { motion } from 'framer-motion';
 import { FaGithub, FaExternalLinkAlt } from 'react-icons/fa';
+import { FaReact, FaJava, FaPython, FaCode, FaHtml5, FaCss3Alt, FaWindows } from 'react-icons/fa';
+import { SiDotnet, SiElectron, SiTailwindcss, SiSqlite, SiSpringboot, SiPostgresql, SiJavascript, SiDart, SiFlutter, SiSupabase } from 'react-icons/si';
+import type { IconType } from 'react-icons';
+
+const techIcons: Record<string, IconType> = {
+  'WinUI 3': FaWindows,
+  '.NET': SiDotnet,
+  'C#': FaCode,
+  'Windows App SDK': FaWindows,
+  'File I/O': FaCode,
+  Electron: SiElectron,
+  React: FaReact,
+  'Tailwind CSS': SiTailwindcss,
+  SQLite: SiSqlite,
+  'Spring Boot': SiSpringboot,
+  Java: FaJava,
+  PostgreSQL: SiPostgresql,
+  REST: FaCode,
+  JavaScript: SiJavascript,
+  'React Widgets': FaReact,
+  'HTML5 & CSS3': FaHtml5,
+  'Web Storage API': FaCss3Alt,
+  Flutter: SiFlutter,
+  Dart: SiDart,
+  Python: FaPython,
+  Supabase: SiSupabase,
+};
 
 const projects = [
   {
@@ -45,7 +72,7 @@ const projects = [
     tech: ["Flutter", "Dart", "Python", "Supabase"],
     github: "#",
     live: "#",
-    image: "https://images.unsplash.com/photo-1595667929228-197607bc9271?q=80&w=1600&auto=format&fit=crop"
+    image: "/images/freshtracksl.png"
   }
 ];
 
@@ -63,7 +90,7 @@ const Projects = () => {
         </h3>
 
         <div className="flex flex-col gap-24 sm:gap-32 py-4">
-        {projects.map((p, i) => (
+        {projects.map((p) => (
           <motion.div 
             key={p.id} 
             initial={{ opacity: 0, y: 50 }}
@@ -82,21 +109,25 @@ const Projects = () => {
               <div className="pl-4 border-l border-zinc-800">
                 <p className="text-zinc-400 text-[10px] font-bold tracking-[0.2em] uppercase mb-4">Tech Stacks</p>
                 <ul className="flex flex-col gap-2">
-                  {p.tech.map(t => <li key={t} className="text-zinc-300 text-xs tracking-wider uppercase font-light">{t}</li>)}
+                  {p.tech.map((t) => {
+                    const Icon = techIcons[t] ?? FaCode;
+                    return (
+                      <li key={t} className="flex items-center gap-2 text-zinc-300 text-xs tracking-wider">
+                        <Icon className="text-zinc-300 text-[12px] shrink-0" />
+                        <span>{t}</span>
+                      </li>
+                    );
+                  })}
                 </ul>
               </div>
             </div>
 
             {/* Main Title Area */}
             <div className="lg:col-span-5 flex flex-col justify-center px-4 lg:px-8">
-              {/* <div className="text-sky-500 font-mono text-sm mb-6 flex items-center gap-4">
-                <span className="w-8 h-[1px] bg-sky-500/50"></span>
-                P—0{i+1}
-              </div> */}
               <h3 className="text-4xl md:text-5xl font-bold text-white uppercase leading-[1.05] tracking-tighter mb-8 break-words">
                 {p.title.split(' ').map((word, idx) => <span key={idx} className="block">{word}</span>)}
               </h3>
-              <p className="text-zinc-400 text-sm leading-relaxed mb-10 font-light pr-4 lg:pr-8">
+              <p className="text-zinc-400 text-sm leading-relaxed mb-10 pr-4 lg:pr-8">
                 {p.description}
               </p>
               <div className="flex gap-6 border-t border-zinc-800 pt-6">

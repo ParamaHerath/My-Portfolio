@@ -83,7 +83,7 @@ const Skills = () => {
                       whileInView={{ opacity: 1, y: 0 }}
                       viewport={{ once: true }}
                       transition={{ delay: index * 0.05 }}
-                      className="flex items-center gap-2 sm:gap-3 px-3 py-2 sm:px-5 sm:py-3 bg-zinc-900 border border-white/5 rounded-md hover:bg-zinc-800 hover:border-white/10 transition-colors shadow-sm cursor-default"
+                      className="flex items-center gap-2 sm:gap-3 px-3 py-2 sm:px-5 sm:py-3 bg-zinc-900/90 border border-white/5 rounded-md hover:bg-zinc-800 hover:border-white/10 transition-colors shadow-sm cursor-default"
                     >
                       <Icon className="text-base sm:text-xl" style={{ color: skill.color }} />
                       <span className="font-medium text-zinc-200 text-xs sm:text-sm tracking-wide">{skill.name}</span>

@@ -19,9 +19,6 @@ const Hero = () => {
         </h2>
         
         <p className="text-[15px] sm:text-lg text-zinc-400 max-w-xl leading-relaxed mb-8 sm:mb-10">
-          {/* I'm a software engineer specializing in building (and occasionally designing) 
-          exceptional digital experiences. Currently, I'm focused on building accessible, 
-          human-centered products at <span className="text-sky-400 font-medium">Tech Corp</span>. */}
           I'm a Computer Science undergrad building scalable, user-friendly applications
           across multiple platforms, merging modern tech with intuitive design. <span className="text-sky-400 font-medium">
           Have a project in mind? Let’s bring it to life.</span>
