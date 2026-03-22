@@ -29,7 +29,7 @@ const Navbar = () => {
         <motion.div 
           initial={{ opacity: 0, x: -20 }}
           animate={{ opacity: 1, x: 0 }}
-          className="text-xl font-bold tracking-[0.35rem] text-white font-mono"
+          className="text-md sm:text-base md:text-xl font-bold tracking-[0.25rem] text-white font-mono"
         >
           <span className="text-sky-400">&lt;</span>
           ParamaHerath
