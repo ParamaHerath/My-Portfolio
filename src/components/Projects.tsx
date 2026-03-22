@@ -97,16 +97,16 @@ const Projects = () => {
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true, margin: "-100px" }}
             transition={{ duration: 0.8 }}
-            className="grid grid-cols-1 lg:grid-cols-12 gap-8 items-stretch min-h-[500px]"
+            className="flex flex-col lg:grid lg:grid-cols-12 gap-8 lg:gap-8 items-stretch min-h-[500px]"
           >
             {/* Small side info */}
-            <div className="lg:col-span-2 flex flex-col justify-between py-4">
-              <div className="w-full aspect-[3/4] relative hidden lg:block overflow-hidden bg-zinc-900 mb-8 border border-white/5">
+            <div className="order-2 lg:order-1 lg:col-span-2 flex flex-row lg:flex-col justify-between gap-6 lg:gap-0 lg:py-4">
+              <div className="w-1/2 lg:w-full aspect-[3/4] relative block overflow-hidden bg-zinc-900 lg:mb-8 border border-white/5">
                 <img src={p.image} className="absolute inset-0 w-full h-full object-cover scale-150 origin-top-left opacity-30 mix-blend-screen" />
                 <div className="absolute inset-0 bg-gradient-to-t from-zinc-950/80 to-transparent" />
-                <div className="absolute bottom-6 left-6 text-white/50 text-[10px] font-mono tracking-widest uppercase">Detail</div>
+                <div className="absolute bottom-4 left-4 lg:bottom-6 lg:left-6 text-white/50 text-[10px] font-mono tracking-widest uppercase">Detail</div>
               </div>
-              <div className="pl-4 border-l border-zinc-800">
+              <div className="w-1/2 lg:w-full border-l-0 lg:border-l border-zinc-800 lg:pl-4">
                 <p className="text-zinc-400 text-[10px] font-bold tracking-[0.2em] uppercase mb-4">Tech Stacks</p>
                 <ul className="flex flex-col gap-2">
                   {p.tech.map((t) => {
@@ -123,21 +123,21 @@ const Projects = () => {
             </div>
 
             {/* Main Title Area */}
-            <div className="lg:col-span-5 flex flex-col justify-center px-4 lg:px-8">
-              <h3 className="text-4xl md:text-5xl font-bold text-white uppercase leading-[1.05] tracking-tighter mb-8 break-words">
+            <div className="contents lg:flex lg:flex-col lg:justify-center lg:col-span-5 lg:px-8 lg:order-2">
+              <h3 className="order-1 lg:order-none text-4xl md:text-5xl font-bold text-white uppercase leading-[1.05] tracking-tighter mb-2 lg:mb-8 break-words">
                 {p.title.split(' ').map((word, idx) => <span key={idx} className="block">{word}</span>)}
               </h3>
-              <p className="text-zinc-400 text-sm leading-relaxed mb-10 pr-4 lg:pr-8">
+              <p className="order-3 lg:order-none text-zinc-400 text-sm leading-relaxed my-6 lg:my-0 lg:mb-10 lg:pr-8">
                 {p.description}
               </p>
-              <div className="flex gap-6 border-t border-zinc-800 pt-6">
+              <div className="order-5 lg:order-none flex gap-6 border-t border-zinc-800 pt-6 mt-4 lg:mt-0">
                 <a href={p.github} className="flex items-center gap-2 text-xs tracking-widest text-zinc-400 hover:text-white transition-colors uppercase"><FaGithub size={14}/> Source Code</a>
                 <a href={p.live} className="flex items-center gap-2 text-xs tracking-widest text-zinc-400 hover:text-white transition-colors uppercase"><FaExternalLinkAlt size={12}/> View Live</a>
               </div>
             </div>
 
             {/* Large Image Area */}
-            <div className="lg:col-span-5 h-[400px] lg:h-auto relative w-full overflow-hidden bg-zinc-900 border border-white/5 order-first lg:order-last">
+            <div className="order-4 lg:order-3 lg:col-span-5 h-[300px] lg:h-auto relative w-full overflow-hidden bg-zinc-900 border border-white/5">
               <div className="absolute top-12 left-12 origin-top-left rotate-90 text-[10px] tracking-[0.4em] text-white/80 uppercase z-10 mix-blend-difference hidden md:block select-none pointer-events-none">
                 Modern Presentation
               </div>
