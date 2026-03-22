@@ -15,16 +15,16 @@ const projects = [
     id: 2,
     title: "VidStash",
     description: "A media library desktop app that organizes local files into a Netflix-style interface. Features automated filename parsing, TMDB metadata integration, and watch-status tracking.",
-    tech: ["Electron", "Node.js", "SQLite", "Tailwind CSS"],
+    tech: ["Electron", "React", "Tailwind CSS", "SQLite", "File I/O"],
     github: "#",
     live: "#",
     image: "https://images.unsplash.com/photo-1522869635100-9f4c5e86aa37?q=80&w=1600&auto=format&fit=crop"
   },
   {
     id: 3,
-    title: "Real-Time Ticketing",
+    title: "Real-Time Ticketing System Simulatior",
     description: "A full-stack simulation of high-traffic network ticketing. Implements multithreading and synchronization on the backend to prevent race conditions during concurrent transactions.",
-    tech: ["React", "Spring Boot", "PostgreSQL", "Java"],
+    tech: ["React", "Spring Boot", "Java", "PostgreSQL", "REST"],
     github: "#",
     live: "#",
     image: "https://images.unsplash.com/photo-1539628399213-d6aa89c93074?q=80&w=1600&auto=format&fit=crop"
@@ -33,7 +33,7 @@ const projects = [
     id: 4,
     title: "NestQuest",
     description: "A real-estate exploration platform focused on high-performance client-side logic. Includes advanced filtering systems and Local Storage integration for persisting user preferences.",
-    tech: ["React", "React Widgets", "localStorage API", "JS"],
+    tech: ["React", "JavaScript", "React Widgets", "HTML5 & CSS3", "Web Storage API"],
     github: "#",
     live: "#",
     image: "https://images.unsplash.com/photo-1560518883-ce09059eeffa?q=80&w=1600&auto=format&fit=crop"
@@ -42,7 +42,7 @@ const projects = [
     id: 5,
     title: "FreshTrack SL",
     description: "A cross-platform mobile app designed to reduce Sri Lankan crop wastage. Uses linear regression and predictive analytics to forecast demand and optimize supply chains.",
-    tech: ["Flutter", "Python", "Supabase", "Machine Learning"],
+    tech: ["Flutter", "Dart", "Python", "Supabase"],
     github: "#",
     live: "#",
     image: "https://images.unsplash.com/photo-1595667929228-197607bc9271?q=80&w=1600&auto=format&fit=crop"
@@ -51,17 +51,18 @@ const projects = [
 
 const Projects = () => {
   return (
-    <section id="projects" className="relative pt-32 pb-16">
-      <div className="w-full max-w-7xl mx-auto px-6 z-20 mb-16 md:mb-24">
-        <div className="flex flex-col xl:flex-row xl:items-center justify-between gap-8">
-          <div>
-            <h3 className="text-4xl md:text-5xl font-bold text-white mb-2">Projects / Work</h3>
-          </div>
-        </div>
-        <div className="h-[1px] w-full bg-zinc-800 mt-8"></div>
-      </div>
+    <section id="projects" className="py-12 md:py-20">
+      <motion.div
+        initial={{ opacity: 0 }}
+        whileInView={{ opacity: 1 }}
+        viewport={{ once: true }}
+      >
+        <h3 className="text-2xl sm:text-3xl font-bold text-white mb-8 sm:mb-12 flex items-center">
+          Projects / Work
+          <div className="h-[1px] bg-white/10 flex-grow ml-4 sm:ml-6"></div>
+        </h3>
 
-      <div className="w-full max-w-7xl mx-auto px-6 flex flex-col gap-40 py-12">
+        <div className="flex flex-col gap-24 sm:gap-32 py-4">
         {projects.map((p, i) => (
           <motion.div 
             key={p.id} 
@@ -72,14 +73,14 @@ const Projects = () => {
             className="grid grid-cols-1 lg:grid-cols-12 gap-8 items-stretch min-h-[500px]"
           >
             {/* Small side info */}
-            <div className="lg:col-span-3 flex flex-col justify-between py-4">
+            <div className="lg:col-span-2 flex flex-col justify-between py-4">
               <div className="w-full aspect-[3/4] relative hidden lg:block overflow-hidden bg-zinc-900 mb-8 border border-white/5">
                 <img src={p.image} className="absolute inset-0 w-full h-full object-cover scale-150 origin-top-left opacity-30 mix-blend-screen" />
                 <div className="absolute inset-0 bg-gradient-to-t from-zinc-950/80 to-transparent" />
-                <div className="absolute bottom-6 left-6 text-white/50 text-[10px] font-mono tracking-widest uppercase">Detail shot</div>
+                <div className="absolute bottom-6 left-6 text-white/50 text-[10px] font-mono tracking-widest uppercase">Detail</div>
               </div>
               <div className="pl-4 border-l border-zinc-800">
-                <p className="text-zinc-600 text-[10px] tracking-[0.2em] uppercase mb-4">Technologies Stack</p>
+                <p className="text-zinc-400 text-[10px] font-bold tracking-[0.2em] uppercase mb-4">Tech Stacks</p>
                 <ul className="flex flex-col gap-2">
                   {p.tech.map(t => <li key={t} className="text-zinc-300 text-xs tracking-wider uppercase font-light">{t}</li>)}
                 </ul>
@@ -87,15 +88,15 @@ const Projects = () => {
             </div>
 
             {/* Main Title Area */}
-            <div className="lg:col-span-4 flex flex-col justify-center px-4 lg:px-8">
-              <div className="text-sky-500 font-mono text-sm mb-6 flex items-center gap-4">
+            <div className="lg:col-span-5 flex flex-col justify-center px-4 lg:px-8">
+              {/* <div className="text-sky-500 font-mono text-sm mb-6 flex items-center gap-4">
                 <span className="w-8 h-[1px] bg-sky-500/50"></span>
                 P—0{i+1}
-              </div>
-              <h3 className="text-4xl md:text-5xl lg:text-7xl font-bold text-white uppercase leading-[1.05] tracking-tighter mb-8 break-words">
+              </div> */}
+              <h3 className="text-4xl md:text-5xl font-bold text-white uppercase leading-[1.05] tracking-tighter mb-8 break-words">
                 {p.title.split(' ').map((word, idx) => <span key={idx} className="block">{word}</span>)}
               </h3>
-              <p className="text-zinc-400 text-sm leading-relaxed mb-10 max-w-sm font-light">
+              <p className="text-zinc-400 text-sm leading-relaxed mb-10 font-light pr-4 lg:pr-8">
                 {p.description}
               </p>
               <div className="flex gap-6 border-t border-zinc-800 pt-6">
@@ -113,7 +114,8 @@ const Projects = () => {
             </div>
           </motion.div>
         ))}
-      </div>
+        </div>
+      </motion.div>
     </section>
   );
 };
