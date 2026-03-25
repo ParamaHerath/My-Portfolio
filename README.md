@@ -1,73 +1,92 @@
-# React + TypeScript + Vite
+# Parama Herath - Portfolio
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+A modern personal portfolio built with React, TypeScript, and Vite.
 
-Currently, two official plugins are available:
+This site showcases projects, skills, education/work experience, and contact details with a smooth motion-driven UI and a custom animated star background.
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Oxc](https://oxc.rs)
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/)
+## Highlights
 
-## React Compiler
+- Responsive single-page portfolio layout
+- Section-based navigation (Projects, Skills, Experience, Contact)
+- Animated hero and scroll-based effects using Framer Motion
+- Canvas-driven moving star background
+- Project cards with technology tags and links
+- Resume quick-access link from the hero section
 
-The React Compiler is not enabled on this template because of its impact on dev & build performances. To add it, see [this documentation](https://react.dev/learn/react-compiler/installation).
+## Tech Stack
 
-## Expanding the ESLint configuration
+- React 19
+- TypeScript
+- Vite
+- Tailwind CSS (v4)
+- Framer Motion
+- React Icons
 
-If you are developing a production application, we recommend updating the configuration to enable type-aware lint rules:
+## Getting Started
 
-```js
-export default defineConfig([
-  globalIgnores(['dist']),
-  {
-    files: ['**/*.{ts,tsx}'],
-    extends: [
-      // Other configs...
+### Prerequisites
 
-      // Remove tseslint.configs.recommended and replace with this
-      tseslint.configs.recommendedTypeChecked,
-      // Alternatively, use this for stricter rules
-      tseslint.configs.strictTypeChecked,
-      // Optionally, add this for stylistic rules
-      tseslint.configs.stylisticTypeChecked,
+- Node.js 18+ (recommended)
+- npm
 
-      // Other configs...
-    ],
-    languageOptions: {
-      parserOptions: {
-        project: ['./tsconfig.node.json', './tsconfig.app.json'],
-        tsconfigRootDir: import.meta.dirname,
-      },
-      // other options...
-    },
-  },
-])
+### Installation
+
+```bash
+npm install
 ```
 
-You can also install [eslint-plugin-react-x](https://github.com/Rel1cx/eslint-react/tree/main/packages/plugins/eslint-plugin-react-x) and [eslint-plugin-react-dom](https://github.com/Rel1cx/eslint-react/tree/main/packages/plugins/eslint-plugin-react-dom) for React-specific lint rules:
+### Run in Development
 
-```js
-// eslint.config.js
-import reactX from 'eslint-plugin-react-x'
-import reactDom from 'eslint-plugin-react-dom'
-
-export default defineConfig([
-  globalIgnores(['dist']),
-  {
-    files: ['**/*.{ts,tsx}'],
-    extends: [
-      // Other configs...
-      // Enable lint rules for React
-      reactX.configs['recommended-typescript'],
-      // Enable lint rules for React DOM
-      reactDom.configs.recommended,
-    ],
-    languageOptions: {
-      parserOptions: {
-        project: ['./tsconfig.node.json', './tsconfig.app.json'],
-        tsconfigRootDir: import.meta.dirname,
-      },
-      // other options...
-    },
-  },
-])
+```bash
+npm run dev
 ```
+
+Vite will start a local dev server (typically at `http://localhost:5173`).
+
+## Available Scripts
+
+- `npm run dev` - Start development server
+- `npm run build` - Type-check and build production assets
+- `npm run preview` - Preview the production build locally
+- `npm run lint` - Run ESLint
+
+## Project Structure
+
+```text
+src/
+  App.tsx
+  main.tsx
+  index.css
+  components/
+    Navbar.tsx
+    Hero.tsx
+    Projects.tsx
+    Skills.tsx
+    Experience.tsx
+    Contact.tsx
+    StarBackground.tsx
+public/
+  images/
+```
+
+## Customization Guide
+
+- Update hero intro text and social links in `src/components/Hero.tsx`
+- Edit/add projects in `src/components/Projects.tsx`
+- Update skill categories in `src/components/Skills.tsx`
+- Update timeline entries in `src/components/Experience.tsx`
+- Change contact email in `src/components/Contact.tsx`
+- Replace project screenshots in `public/images/`
+- Keep your resume PDF at `public/ParamaHerath.pdf` (or update the link in Hero)
+
+## Build for Production
+
+```bash
+npm run build
+```
+
+Build output is generated in the `dist/` folder.
+
+## License
+
+This project is for personal portfolio use.
