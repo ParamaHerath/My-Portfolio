@@ -36,7 +36,7 @@ const projects = [
     github: "#",
     live: "#",
     image: "images/context.png",
-    smallImage: "https://images.unsplash.com/photo-1517694712202-14dd9538aa97?q=80&w=800&auto=format&fit=crop"
+    smallImage: "images/context-sm.png"
   },
   {
     id: 2,
