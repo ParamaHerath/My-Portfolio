@@ -1,6 +1,7 @@
 import { motion } from 'framer-motion';
 import { FaGithub, FaExternalLinkAlt, FaReact, FaJava, FaPython, FaCode, FaHtml5, FaCss3Alt, FaWindows } from 'react-icons/fa';
 import { SiDotnet, SiElectron, SiTailwindcss, SiSqlite, SiSpringboot, SiPostgresql, SiJavascript, SiDart, SiFlutter, SiSupabase } from 'react-icons/si';
+import { DiMsqlServer, DiDotnet } from "react-icons/di";
 import type { IconType } from 'react-icons';
 
 const techIcons: Record<string, IconType> = {
@@ -25,13 +26,15 @@ const techIcons: Record<string, IconType> = {
   Dart: SiDart,
   Python: FaPython,
   Supabase: SiSupabase,
+  'SQL Server': DiMsqlServer,
+  'ASP.NET Core': DiDotnet
 };
 
 const projects = [
   {
     id: 1,
     title: "Context",
-    description: "A WinUI 3 whiteboard-style desktop application for unified canvas management. Enables users to store text, images, and drawings in a single custom file format for simplified resource handling.",
+    description: "WinUI 3 whiteboard-style desktop application for unified canvas management. Enables users to store text, images, and drawings in a single custom file format for simplified resource handling.",
     tech: ["WinUI 3", ".NET", "C#", "Windows App SDK", "File I/O"],
     github: "#",
     live: "#",
@@ -41,7 +44,7 @@ const projects = [
   {
     id: 2,
     title: "VidStash",
-    description: "A media library desktop app that organizes local files into a Netflix-style interface. Features automated filename parsing, TMDB metadata integration, and watch-status tracking.",
+    description: "Media library desktop app that organizes local files into a Netflix-style interface. Features automated filename parsing, TMDB metadata integration, and watch-status tracking.",
     tech: ["Electron", "React", "Tailwind CSS", "SQLite", "File I/O"],
     github: "#",
     live: "#",
@@ -51,7 +54,7 @@ const projects = [
   {
     id: 3,
     title: "Real-Time Ticketing System Simulatior",
-    description: "A full-stack simulation of high-traffic network ticketing. Implements multithreading and synchronization on the backend to prevent race conditions during concurrent transactions.",
+    description: "Full-stack simulation of high-traffic network ticketing. Implements multithreading and synchronization on the backend to prevent race conditions during concurrent transactions.",
     tech: ["React", "Spring Boot", "Java", "PostgreSQL", "REST"],
     github: "#",
     live: "#",
@@ -60,18 +63,18 @@ const projects = [
   },
   {
     id: 4,
-    title: "NestQuest",
-    description: "A real-estate exploration platform focused on high-performance client-side logic. Includes advanced filtering systems and Local Storage integration for persisting user preferences.",
-    tech: ["React", "JavaScript", "React Widgets", "HTML5 & CSS3", "Web Storage API"],
+    title: "ZingEvents",
+    description: "Full-stack event booking platform with marketplace features, featuring interactive SVG seating layouts, real-time availability updates, secure REST APIs, and concurrency-safe booking with backend validation.",
+    tech: ["React", "Tailwind CSS", "ASP.NET Core", "SQL Server", "REST"],
     github: "#",
     live: "#",
-    image: "images/nestquest.png",
-    smallImage: "images/nestquest-sm.jpg"
+    image: "images/zingevents.png",
+    smallImage: "images/zingevents-sm.png"
   },
   {
     id: 5,
     title: "FreshTrack SL",
-    description: "A cross-platform mobile app designed to reduce Sri Lankan crop wastage. Uses linear regression and predictive analytics to forecast demand and optimize supply chains.",
+    description: "Cross-platform mobile app designed to reduce Sri Lankan crop wastage. Uses linear regression and predictive analytics to forecast demand and optimize supply chains.",
     tech: ["Flutter", "Dart", "Python", "Supabase"],
     github: "#",
     live: "#",
