@@ -1,5 +1,5 @@
 import { motion } from 'framer-motion';
-import { FaGithub, FaExternalLinkAlt, FaReact, FaJava, FaPython, FaCode, FaHtml5, FaCss3Alt, FaWindows } from 'react-icons/fa';
+import { FaGithub, FaExternalLinkAlt, FaReact, FaJava, FaPython, FaCode, FaHtml5, FaCss3Alt, FaWindows, FaFileSignature } from 'react-icons/fa';
 import { SiDotnet, SiElectron, SiTailwindcss, SiSqlite, SiSpringboot, SiPostgresql, SiJavascript, SiDart, SiFlutter, SiSupabase } from 'react-icons/si';
 import { DiMsqlServer, DiDotnet } from "react-icons/di";
 import type { IconType } from 'react-icons';
@@ -9,7 +9,7 @@ const techIcons: Record<string, IconType> = {
   '.NET': SiDotnet,
   'C#': FaCode,
   'Windows App SDK': FaWindows,
-  'File I/O': FaCode,
+  'File I/O': FaFileSignature,
   Electron: SiElectron,
   React: FaReact,
   'Tailwind CSS': SiTailwindcss,
@@ -33,8 +33,18 @@ const techIcons: Record<string, IconType> = {
 const projects = [
   {
     id: 1,
+    title: "Talent-Trail",
+    description: "Full-stack internship management platform with role-based access, enabling supervisors and interns to track projects, teams, and intra-project progress, integrated with Google OAuth authentication and remote repository APIs.",
+    tech: ["React", "Spring Boot", "PostgreSQL", "File I/O", "REST"],
+    github: "#",
+    live: "https://talenttrail.slt.lk",
+    image: "images/talent-trail.png",
+    smallImage: "images/talent-trail-sm.png"
+  },
+  {
+    id: 2,
     title: "Context",
-    description: "WinUI 3 whiteboard-style desktop application for unified canvas management. Enables users to store text, images, and drawings in a single custom file format for simplified resource handling.",
+    description: "Whiteboard-style, native WinUI 3 desktop application for unified canvas management. Enables users to store text, images, and drawings in a single custom file format for simplified resource handling.",
     tech: ["WinUI 3", ".NET", "C#", "Windows App SDK", "File I/O"],
     github: "#",
     live: "#",
@@ -42,7 +52,7 @@ const projects = [
     smallImage: "images/context-sm.png"
   },
   {
-    id: 2,
+    id: 3,
     title: "VidStash",
     description: "Media library desktop app that organizes local files into a Netflix-style interface. Features automated filename parsing, TMDB metadata integration, and watch-status tracking.",
     tech: ["Electron", "React", "Tailwind CSS", "SQLite", "File I/O"],
@@ -52,17 +62,17 @@ const projects = [
     smallImage: "images/vidstash-sm.png"
   },
   {
-    id: 3,
-    title: "Real-Time Ticketing System Simulatior",
-    description: "Full-stack simulation of high-traffic network ticketing. Implements multithreading and synchronization on the backend to prevent race conditions during concurrent transactions.",
-    tech: ["React", "Spring Boot", "Java", "PostgreSQL", "REST"],
+    id: 4,
+    title: "E-Commerce Platform",
+    description: "Full-stack e-commerce platform featuring secure authentication, dynamic product catalog with search and filtering, real-time cart management, and a role-based admin dashboard for managing products, orders, and users.",
+    tech: ["React", "Tailwind CSS", "Laravel", "PostgreSQL", "REST"],
     github: "#",
     live: "#",
-    image: "https://images.unsplash.com/photo-1539628399213-d6aa89c93074?q=80&w=1600&auto=format&fit=crop",
-    smallImage: "https://images.unsplash.com/photo-1555066931-4365d14bab8c?q=80&w=800&auto=format&fit=crop"
+    image: "images/ecommerce.png",
+    smallImage: "images/ecommerce-sm.png"
   },
   {
-    id: 4,
+    id: 5,
     title: "ZingEvents",
     description: "Full-stack event booking platform with marketplace features, featuring interactive SVG seating layouts, real-time availability updates, secure REST APIs, and concurrency-safe booking with backend validation.",
     tech: ["React", "Tailwind CSS", "ASP.NET Core", "SQL Server", "REST"],
@@ -72,7 +82,7 @@ const projects = [
     smallImage: "images/zingevents-sm.png"
   },
   {
-    id: 5,
+    id: 6,
     title: "FreshTrack SL",
     description: "Cross-platform mobile app designed to reduce Sri Lankan crop wastage. Uses linear regression and predictive analytics to forecast demand and optimize supply chains.",
     tech: ["Flutter", "Dart", "Python", "Supabase"],
