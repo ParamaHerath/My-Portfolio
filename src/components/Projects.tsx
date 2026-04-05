@@ -56,8 +56,8 @@ const projects = [
     title: "VidStash",
     description: "Media library desktop app that organizes local files into a Netflix-style interface. Features automated filename parsing, TMDB metadata integration, and watch-status tracking.",
     tech: ["Electron", "React", "Tailwind CSS", "SQLite", "File I/O"],
-    github: "#",
-    live: "#",
+    github: "https://github.com/ParamaHerath/VidStash",
+    live: "https://github.com/ParamaHerath/VidStash/releases",
     image: "images/vidstash.png",
     smallImage: "images/vidstash-sm.png"
   },
@@ -66,7 +66,7 @@ const projects = [
     title: "E-Commerce Platform",
     description: "Full-stack e-commerce platform featuring secure authentication, dynamic product catalog with search and filtering, real-time cart management, and a role-based admin dashboard for managing products, orders, and users.",
     tech: ["React", "Tailwind CSS", "Laravel", "PostgreSQL", "REST"],
-    github: "#",
+    github: "https://github.com/ParamaHerath/E-Commerce-Platform",
     live: "#",
     image: "images/ecommerce.png",
     smallImage: "images/ecommerce-sm.png"
@@ -76,7 +76,7 @@ const projects = [
     title: "ZingEvents",
     description: "Full-stack event booking platform with marketplace features, featuring interactive SVG seating layouts, real-time availability updates, secure REST APIs, and concurrency-safe booking with backend validation.",
     tech: ["React", "Tailwind CSS", "ASP.NET Core", "SQL Server", "REST"],
-    github: "#",
+    github: "https://github.com/ParamaHerath/ZingEvents",
     live: "#",
     image: "images/zingevents.png",
     smallImage: "images/zingevents-sm.png"
@@ -86,8 +86,8 @@ const projects = [
     title: "FreshTrack SL",
     description: "Cross-platform mobile app designed to reduce Sri Lankan crop wastage. Uses linear regression and predictive analytics to forecast demand and optimize supply chains.",
     tech: ["Flutter", "Dart", "Python", "Supabase"],
-    github: "#",
-    live: "#",
+    github: "https://github.com/ParamaHerath/FreshTrackSL-SDGP",
+    live: "https://github.com/ParamaHerath/FreshTrackSL-SDGP/releases",
     image: "images/freshtracksl.png",
     smallImage: "images/freshtracksl-sm.png"
   }
