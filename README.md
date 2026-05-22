@@ -1,5 +1,9 @@
 # Parama Herath - Portfolio
 
+![React](https://img.shields.io/badge/React-20232A?style=for-the-badge&logo=react&logoColor=61DAFB)
+![Tailwind CSS](https://img.shields.io/badge/Tailwind%20CSS-38B2AC?style=for-the-badge&logo=tailwind-css&logoColor=white)
+![TypeScript](https://img.shields.io/badge/TypeScript-3178C6?style=for-the-badge&logo=typescript&logoColor=white)
+
 A modern personal portfolio built with React, TypeScript, and Vite.
 
 This site showcases projects, skills, education/work experience, and contact details with a smooth motion-driven UI and a custom animated star background.
